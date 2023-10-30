@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class AlienQuest {
-    private List<String> variants;
-    private int believe;
+public class AlienQuest implements Quest{
     private boolean fight;
-    private Random randomizer;
+    private final Random randomizer;
 
     public AlienQuest() {
         fight = false;
@@ -17,6 +15,8 @@ public class AlienQuest {
     }
 
     public String getQuestion(String answer) {
+        int believe;
+
         switch (answer) {
             case ("LostTheMemory"):
                 return "You've lost your memory. Accept the UFO challenge?";
@@ -66,6 +66,8 @@ public class AlienQuest {
     }
 
     public List<String> getVariants(String answer) {
+        List<String> variants;
+
         switch (answer) {
             case ("LostTheMemory"):
                 variants = new ArrayList<>();
