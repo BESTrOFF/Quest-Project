@@ -1,6 +1,7 @@
 package com.example.quest.controllers;
 
 import com.example.quest.questions.quests.AlienQuest;
+import com.example.quest.questions.quests.Quest;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -28,7 +29,7 @@ public class GameServlet extends HttpServlet {
             answer = (String) req.getAttribute("answer");
         }
 
-        AlienQuest quest = new AlienQuest();
+        Quest quest = new AlienQuest();
 
         List<String> variants = quest.getVariants(answer);
         String question = quest.getQuestion(answer);
