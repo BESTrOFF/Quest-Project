@@ -9,37 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76aa79f9-ab41-4e03-80a4-5126da1856d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/AlienQuestions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/controllers/GameServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/controllers/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/controllers/SecondGameServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/db/DB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/db/DBController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/AlienQuest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/Bridge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/ChallengeAccepted.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/EndGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/Lie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/LostTheMemory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/QuestionsList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/game.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/test.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/quest/db/DBTest.java" afterDir="false" />
+    <list default="true" id="76aa79f9-ab41-4e03-80a4-5126da1856d6" name="Changes" comment="Quest1">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/AlienQuestions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/controllers/GameServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/controllers/GameServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/AlienQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/quests/AlienQuest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/Bridge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/ChallengeAccepted.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/EndGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/Lie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/LostTheMemory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/Question.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/quest/questions/QuestionsList.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,8 +206,17 @@
       <workItem from="1698487576653" duration="615000" />
       <workItem from="1698510029294" duration="2237000" />
       <workItem from="1698593562235" duration="2841000" />
-      <workItem from="1698656485319" duration="3602000" />
+      <workItem from="1698656485319" duration="3913000" />
     </task>
+    <task id="LOCAL-00001" summary="Quest1">
+      <option name="closed" value="true" />
+      <created>1698660299895</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698660299895</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,5 +232,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Quest1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quest1" />
   </component>
 </project>

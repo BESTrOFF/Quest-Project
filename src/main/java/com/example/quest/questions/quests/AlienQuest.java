@@ -1,4 +1,4 @@
-package com.example.quest.questions;
+package com.example.quest.questions.quests;
 
 import java.util.ArrayList;
 import java.util.List;
