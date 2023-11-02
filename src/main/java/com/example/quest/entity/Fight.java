@@ -14,7 +14,8 @@ public class Fight {
         Random randomizer = new Random();
         int enemyCount = randomizer.nextInt(4) + 2;
         for (int i = 0; i < enemyCount; i++) {
-            enemies.add(new Enemy("enemy " + i, 10));
+            int count = i + 1;
+            enemies.add(new Enemy("enemy " + count, 10));
         }
     }
 
@@ -27,17 +28,27 @@ public class Fight {
     }
 
     public void attack() {
-        int attackedEnemyIndex = random.nextInt(enemies.size());
+//        int attackedEnemyIndex = random.nextInt(enemies.size()); Если сделать так, то творится какая-то чертовщина
         int dmg = random.nextInt(5) + 5;
-        Enemy attackedEnemy = enemies.get(attackedEnemyIndex);
+        Enemy attackedEnemy = enemies.get(0);
         int enemyHp = attackedEnemy.getHp();
 
         attackedEnemy.setHp(enemyHp - dmg);
 
         if (attackedEnemy.getHp() <= 0) {
-            enemies.remove(attackedEnemyIndex);
+            enemies.remove(0);
         } else {
             enemies.set(0, attackedEnemy);
         }
+    }
+
+    public int getDmg(int hp){
+        int dmg = 0;
+
+        for(Enemy enemy : enemies){
+            dmg = dmg + enemy.makeDmg();
+        }
+
+        return dmg;
     }
 }
