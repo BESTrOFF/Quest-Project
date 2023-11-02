@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class AlienQuest implements Quest{
+public class AlienQuest implements Quest {
     private boolean fight;
     private final Random randomizer;
 
@@ -26,6 +26,9 @@ public class AlienQuest implements Quest{
 
             case ("Bridge"):
                 return "Who are you?";
+
+            case ("True"):
+                return "They took you home";
 
             case ("Lie"):
                 return "What do you say?";
@@ -88,7 +91,7 @@ public class AlienQuest implements Quest{
             case ("Bridge"):
                 variants = new ArrayList<>();
 
-                variants.add("<button type=\"submit\" name=\"answer\" value=\"EndGame\">True</button>");
+                variants.add("<button type=\"submit\" name=\"answer\" value=\"True\">True</button>");
                 variants.add("<button type=\"submit\" name=\"answer\" value=\"Lie\">Lie</button>");
 
                 return variants;
@@ -114,6 +117,7 @@ public class AlienQuest implements Quest{
                 return variants;
 
             case ("EndGame"):
+            case ("True"):
                 variants = new ArrayList<>();
 
                 variants.add(" <a href=\"index.jsp\">Try again?</a>");
@@ -126,10 +130,9 @@ public class AlienQuest implements Quest{
     }
 
     public String getPath(String answer) {
-        if (!fight){
+        if (!fight) {
             return "WEB-INF/jsps/game.jsp";
-        }
-        else return "fight";
+        } else return "fight";
     }
 
 }

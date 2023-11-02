@@ -1,7 +1,9 @@
 package com.example.quest.controllers;
 
+import com.example.quest.entity.Enemy;
 import com.example.quest.questions.quests.AlienQuest;
 import com.example.quest.questions.quests.Quest;
+import com.example.quest.questions.quests.QuestFabric;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -15,11 +17,14 @@ import java.util.List;
 
 @WebServlet(name = "game", value = "/game")
 public class GameServlet extends HttpServlet {
-    String predAnswer = "";
+    private Quest quest;
+    private QuestFabric questFabric;
+
 
     @Override
     public void init() throws ServletException {
         super.init();
+        questFabric = new QuestFabric();
     }
 
     @Override
@@ -29,7 +34,9 @@ public class GameServlet extends HttpServlet {
             answer = (String) req.getAttribute("answer");
         }
 
-        Quest quest = new AlienQuest();
+        if (quest == null){
+            quest = questFabric.createQuest("AlienQuest");
+        }
 
         List<String> variants = quest.getVariants(answer);
         String question = quest.getQuestion(answer);
@@ -37,8 +44,6 @@ public class GameServlet extends HttpServlet {
 
         req.setAttribute("variants", variants);
         req.setAttribute("question", question);
-
-        predAnswer = answer;
 
         RequestDispatcher dispatcher = req.getRequestDispatcher(path);
         dispatcher.forward(req, resp);
