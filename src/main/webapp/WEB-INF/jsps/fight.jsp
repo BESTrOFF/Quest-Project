@@ -9,19 +9,27 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Fight</title>
 </head>
 <body>
-This is fight
+Your HP: <c:out value="${requestScope.hp}"/>
+<br>
 
 <form method="get" action="fight">
     <table>
-        <tr><th>Enemy</th><th>HP</th></tr>
+        <tr>
+            <th>Enemy</th>
+            <th>HP</th>
+        </tr>
         <c:forEach items="${requestScope.enemies}" var="enemy">
-            <tr><td>${enemy.getName()}</td>
-            <td>${enemy.getHp()}</td></tr>
+            <tr>
+                <td>${enemy.getName()}</td>
+                <td>${enemy.getHp()}</td>
+            </tr>
         </c:forEach>
     </table>
+    <br>
+    <button type="submit" name="action" value="attack">attack</button>
 </form>
 </body>
 </html>
