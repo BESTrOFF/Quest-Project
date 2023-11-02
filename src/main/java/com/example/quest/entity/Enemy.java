@@ -19,10 +19,6 @@ public class Enemy {
         return hp;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setHp(int hp) {
         this.hp = hp;
     }
