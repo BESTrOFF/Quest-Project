@@ -42,7 +42,7 @@ public class Fight {
         }
     }
 
-    public int getDmg(int hp){
+    public int getDmg(){
         int dmg = 0;
 
         for(Enemy enemy : enemies){
