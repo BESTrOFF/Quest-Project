@@ -23,16 +23,14 @@ public class DB {
         return false;
     }
 
-    public String register(String login, String password){
+    public String register(String login, String password) {
         // Если пришли не пустые параметры
-        if (StringUtils.isNoneEmpty(login, password)){
+        if (StringUtils.isNoneEmpty(login, password)) {
             //Если в базе нет такого пользователя - добавить пользователя
-            if(!db.containsKey(login)){
+            if (!db.containsKey(login)) {
                 db.put(login, password);
                 return "successfully";//Код успешной регистрации
-            }
-
-            if (db.containsKey(login)){
+            } else {
                 return "user already exists"; //Код ответа, если такой пользователь уже существует
             }
         }
