@@ -29,13 +29,14 @@ public class GameServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String answer = req.getParameter("answer");
-        if (StringUtils.isEmpty(answer)) {
-            answer = (String) req.getAttribute("answer");
+        String questName = req.getParameter("questName");
+        if(quest == null){
+            quest = questFabric.createQuest(questName);
         }
 
-        if (quest == null){
-            quest = questFabric.createQuest("AlienQuest");
+        String answer = req.getParameter("answer");
+        if (StringUtils.isEmpty(answer)) {
+            answer = quest.getFirstAnswer();
         }
 
         List<String> variants = quest.getVariants(answer);

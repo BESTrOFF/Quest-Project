@@ -54,6 +54,7 @@ public class FightServlet extends HttpServlet {
 
         List<String> variants;
         if (enemies.isEmpty()) {
+            enemies = null;
             message = "You captured the ship and got home";
             variants = new ArrayList<>();
             variants.add("<a href=\"index.jsp\">Try again?</a>");

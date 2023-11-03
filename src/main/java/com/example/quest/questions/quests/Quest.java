@@ -8,4 +8,6 @@ public interface Quest {
     List<String> getVariants(String answer);
 
     String getPath(String answer);
+
+    String getFirstAnswer();
 }

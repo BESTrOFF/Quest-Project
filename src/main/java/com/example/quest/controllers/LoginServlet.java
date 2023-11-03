@@ -15,10 +15,10 @@ import java.io.IOException;
 @WebServlet(name = "login", value = "/login")
 public class LoginServlet extends HttpServlet {
 
-    RequestDispatcher dispatcher;
-    String message;
-    DB db;
-    HttpSession session;
+    private RequestDispatcher dispatcher;
+    private String message;
+    private DB db;
+    private HttpSession session;
 
     @Override
     public void init() throws ServletException {
@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("userName", login);
                 session.setAttribute("db", db);
                 req.setAttribute("answer", "LostTheMemory");
-                dispatcher = req.getRequestDispatcher("game");
+                dispatcher = req.getRequestDispatcher("WEB-INF/jsps/main.jsp");
                 dispatcher.forward(req, resp);
             } else {
                 message = "Invalid login or password";
@@ -57,7 +57,7 @@ public class LoginServlet extends HttpServlet {
                 dispatcher.forward(req, resp);
             }
         } else {
-            message = "some field is empty";
+            message = "Some field is empty";
             req.setAttribute("message", message);
             dispatcher = req.getRequestDispatcher("index.jsp");
             dispatcher.forward(req, resp);
@@ -87,7 +87,7 @@ public class LoginServlet extends HttpServlet {
                 dispatcher.forward(req, resp);
                 break;
             case ("empty field"):
-                message = "some field is empty";
+                message = "Some field is empty";
                 req.setAttribute("message", message);
                 dispatcher = req.getRequestDispatcher("index.jsp");
                 dispatcher.forward(req, resp);

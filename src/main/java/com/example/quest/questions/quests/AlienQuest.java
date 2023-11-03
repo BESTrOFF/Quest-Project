@@ -14,6 +14,11 @@ public class AlienQuest implements Quest {
 
     }
 
+    @Override
+    public String getFirstAnswer() {
+        return "LostTheMemory";
+    }
+
     public String getQuestion(String answer) {
         int believe;
 
@@ -132,7 +137,9 @@ public class AlienQuest implements Quest {
     public String getPath(String answer) {
         if (!fight) {
             return "WEB-INF/jsps/game.jsp";
-        } else return "fight";
+        } else {
+            fight = false;
+            return "fight";
+        }
     }
-
 }
