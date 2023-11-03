@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("userName", login);
                 session.setAttribute("db", db);
                 req.setAttribute("answer", "LostTheMemory");
-                dispatcher = req.getRequestDispatcher("WEB-INF/jsps/main.jsp");
+                dispatcher = req.getRequestDispatcher("main");
                 dispatcher.forward(req, resp);
             } else {
                 message = "Invalid login or password";
