@@ -1,6 +1,7 @@
 package com.example.quest.controllers;
 
 import com.example.quest.db.DB;
+import com.example.quest.db.DBController;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -20,11 +21,14 @@ public class LoginServlet extends HttpServlet {
     private DB db;
     private HttpSession session;
 
+    private DBController dbController;
+
     @Override
     public void init() throws ServletException {
         super.init();
         db = new DB();
-        db.register("q", "w");
+        dbController = new DBController(db);
+        dbController.register("q", "w");
     }
 
     @Override
@@ -44,9 +48,9 @@ public class LoginServlet extends HttpServlet {
 
 
         if (StringUtils.isNoneEmpty(login, password)) {
-            if (db.login(login, password)) {
+            if (dbController.login(login, password)) {
                 session.setAttribute("userName", login);
-                session.setAttribute("db", db);
+                session.setAttribute("db", dbController);
                 req.setAttribute("answer", "LostTheMemory");
                 dispatcher = req.getRequestDispatcher("main");
                 dispatcher.forward(req, resp);
@@ -69,7 +73,7 @@ public class LoginServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        String dbAnswer = db.register(login, password);
+        String dbAnswer = dbController.register(login, password);
 
         switch (dbAnswer) {
             case ("successfully"):
