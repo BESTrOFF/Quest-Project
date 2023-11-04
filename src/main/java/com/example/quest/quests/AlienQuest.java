@@ -1,4 +1,6 @@
-package com.example.quest.questions.quests;
+package com.example.quest.quests;
+
+import com.example.quest.exceptions.WrongAnswerException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +71,7 @@ public class AlienQuest implements Quest {
                 return "End. Play again?";
 
             default:
-                return null;
+                throw new WrongAnswerException("Wrong answer in getQuestion method.");
         }
     }
 
@@ -130,7 +132,7 @@ public class AlienQuest implements Quest {
                 return variants;
 
             default:
-                return null;
+                throw new WrongAnswerException("Wrong answer in getVariants method.");
         }
     }
 
