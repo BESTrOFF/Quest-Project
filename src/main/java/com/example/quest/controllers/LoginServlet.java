@@ -36,7 +36,9 @@ public class LoginServlet extends HttpServlet {
         String method = req.getParameter("loginButton");
         if (StringUtils.isEmpty(method)) {
             doPost(req, resp);
-        } else doGet(req, resp);
+        } else {
+            doGet(req, resp);
+        }
     }
 
     @Override
@@ -46,13 +48,11 @@ public class LoginServlet extends HttpServlet {
 
         session = req.getSession();
 
-
         if (StringUtils.isNoneEmpty(login, password)) {
             if (dbController.login(login, password)) {
                 session.setAttribute("userName", login);
                 session.setAttribute("db", dbController);
-                req.setAttribute("answer", "LostTheMemory");
-                dispatcher = req.getRequestDispatcher("main");
+                dispatcher = req.getRequestDispatcher("WEB-INF/jsps/main.jsp");
                 dispatcher.forward(req, resp);
             } else {
                 message = "Invalid login or password";
@@ -79,8 +79,7 @@ public class LoginServlet extends HttpServlet {
             case ("successfully"):
                 session = req.getSession();
                 session.setAttribute("userName", login);
-                req.setAttribute("answer", "LostTheMemory");
-                dispatcher = req.getRequestDispatcher("game");
+                dispatcher = req.getRequestDispatcher("WEB-INF/jsps/main.jsp");
                 dispatcher.forward(req, resp);
                 break;
 

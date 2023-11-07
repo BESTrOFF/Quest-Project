@@ -10,11 +10,11 @@
 <h1>Welcome to the Alien Quest!</h1>
 <br>
 <c:out value="${requestScope.message}"/>
-<form method="get" action="login">
+<form method="post" action="login">
     <label>
         <input type="text" name="login" placeholder="login">
         <br>
-        <input type="text" name="password" placeholder="password">
+        <input type="password" name="password" placeholder="password">
     </label>
     <br>
     <button type="submit" name="loginButton" value="get">Login</button>
