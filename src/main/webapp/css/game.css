@@ -1,0 +1,27 @@
+body {
+    background-image: url('../picks/fonGame.jpg');
+    background-size: cover; /* чтобы изображение занимало всю площадь фона */
+    background-repeat: no-repeat; /* чтобы изображение не повторялось */
+}
+
+.form-container .form-horizontal .btn {
+    color: #fff;
+    background: rgb(4, 6, 89, 0.8);
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 12px 15px 11px;
+    border-radius: 20px;
+    /*box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px #fff;*/
+    border: none;
+    transition: all 0.5s ease 0s;
+}
+
+.form-container .form-horizontal .btn:hover,
+.form-container .form-horizontal .btn:focus {
+    color: #1A31A3FF;
+    letter-spacing: 3px;
+    box-shadow: none;
+    outline: none;
+}
