@@ -1,0 +1,112 @@
+body, html {
+    margin: 0;
+    font: 1em "Verdana", sans-serif;
+    background-image: url('../picks/fonMain.jpg');
+    background-size: cover; /* чтобы изображение занимало всю площадь фона */
+    background-repeat: no-repeat; /* чтобы изображение не повторялось */
+}
+
+.nav-main {
+    width: 100%;
+    background-color: rgb(4, 6, 89, 0.8);
+    height: 70px;
+    color: #fff;
+}
+
+.nav-main .logo {
+    float: left;
+    height: 40px;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    line-height: 40px;
+}
+
+.nav-main > ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style-type: none;
+}
+
+.nav-main > ul > li {
+    float: left;
+}
+
+.nav-option {
+    display: none;
+}
+
+.nav-option:checked ~ .nav-content {
+    max-height: 400px;
+    -webkit-transition: max-height 0.4s ease-in;
+    -moz-transition: max-height 0.4s ease-in;
+    transition: max-height 0.4s ease-in;
+}
+
+.nav-option:checked + label {
+    background-color: #444;
+}
+
+.nav-option:checked ~ .nav-close {
+    display: block;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 15px 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+}
+
+.nav-item:hover {
+    background-color: rgb(4, 6, 89, 0.8);
+    cursor: pointer;
+}
+
+.nav-content {
+    position: absolute;
+    top: 70px;
+    overflow: hidden;
+    max-height: 0;
+    background-color:rgb(4, 6, 89, 0.8);
+    color: #fff;
+}
+
+.nav-content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-content a:hover {
+    text-decoration: underline;
+}
+
+.nav-sub {
+    padding: 20px;
+}
+
+.nav-sub ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav-sub ul a {
+    display: inline-block;
+    padding: 5px 0;
+
+}
+
+.nav-close {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-close-option {
+    display: none;
+}
