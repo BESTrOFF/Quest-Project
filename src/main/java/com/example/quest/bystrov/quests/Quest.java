@@ -1,4 +1,4 @@
-package com.example.quest.questions.quests;
+package com.example.quest.bystrov.quests;
 
 import java.util.List;
 

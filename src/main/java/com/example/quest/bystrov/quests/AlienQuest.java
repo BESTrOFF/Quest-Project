@@ -1,6 +1,6 @@
-package com.example.quest.quests;
+package com.example.quest.bystrov.quests;
 
-import com.example.quest.exceptions.WrongAnswerException;
+import com.example.quest.bystrov.exceptions.WrongAnswerException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,34 +82,34 @@ public class AlienQuest implements Quest {
             case ("LostTheMemory"):
                 variants = new ArrayList<>();
 
-                variants.add("<button type=\"submit\" name=\"answer\" value=\"ChallengeAccepted\">Yes</button>");
-                variants.add("<button type=\"submit\" name=\"answer\" value=\"EndGame\">No</button>");
+                variants.add("<button type=\"submit\" class=\"btn btn-default\" name=\"answer\" value=\"ChallengeAccepted\">Yes</button>");
+                variants.add("<button type=\"submit\" class=\"btn btn-default\" name=\"answer\" value=\"EndGame\">No</button>");
 
                 return variants;
 
             case ("ChallengeAccepted"):
                 variants = new ArrayList<>();
 
-                variants.add("<button type=\"submit\" name=\"answer\" value=\"Bridge\">Yes</button>");
-                variants.add("<button type=\"submit\" name=\"answer\" value=\"EndGame\">No</button>");
+                variants.add("<button type=\"submit\" class=\"btn btn-default\" name=\"answer\" value=\"Bridge\">Yes</button>");
+                variants.add("<button type=\"submit\" class=\"btn btn-default\" name=\"answer\" value=\"EndGame\">No</button>");
 
                 return variants;
 
             case ("Bridge"):
                 variants = new ArrayList<>();
 
-                variants.add("<button type=\"submit\" name=\"answer\" value=\"True\">True</button>");
-                variants.add("<button type=\"submit\" name=\"answer\" value=\"Lie\">Lie</button>");
+                variants.add("<button type=\"submit\" class=\"btn btn-default\" name=\"answer\" value=\"True\">True</button>");
+                variants.add("<button type=\"submit\" class=\"btn btn-default\" name=\"answer\" value=\"Lie\">Lie</button>");
 
                 return variants;
 
             case ("Lie"):
                 variants = new ArrayList<>();
 
-                variants.add("<button type=\"submit\" name=\"answer\" value=\"Doctor\">" +
+                variants.add("<button type=\"submit\" class=\"btn btn-default\" name=\"answer\" value=\"Doctor\">" +
                         "I'm Doctor. Urgently take me to Earth!" +
                         "</button>");
-                variants.add("<button type=\"submit\" name=\"answer\" value=\"Captain\">" +
+                variants.add("<button type=\"submit\" class=\"btn btn-default\" name=\"answer\" value=\"Captain\">" +
                         "I'm the captain of this ship. Heading for Earth!" +
                         "</button>");
 

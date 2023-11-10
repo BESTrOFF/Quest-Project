@@ -1,4 +1,4 @@
-package com.example.quest.db;
+package com.example.quest.bystrov.db;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

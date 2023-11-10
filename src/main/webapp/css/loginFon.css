@@ -1,5 +1,5 @@
 body {
-    background-image: url('fonlogin.jpg');
+    background-image: url('../picks/fonlogin.jpg');
     background-size: cover; /* чтобы изображение занимало всю площадь фона */
     background-repeat: no-repeat; /* чтобы изображение не повторялось */
 }

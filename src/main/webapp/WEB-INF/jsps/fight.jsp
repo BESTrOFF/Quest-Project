@@ -12,6 +12,15 @@
     <title>Fight</title>
 </head>
 <body>
+<style>
+    body {
+        color: #efeff3;
+        background-image: url('../../picks/fonGame.jpg');
+        background-size: cover; /* чтобы изображение занимало всю площадь фона */
+        background-repeat: no-repeat; /* чтобы изображение не повторялось */
+    }
+</style>
+
 Your HP: <c:out value="${requestScope.hp}"/>
 <br>
 

@@ -1,4 +1,4 @@
-package com.example.quest.db;
+package com.example.quest.bystrov.db;
 
 public class DBController {
     DB db;

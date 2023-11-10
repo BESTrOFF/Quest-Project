@@ -1,4 +1,4 @@
-package com.example.quest.exceptions;
+package com.example.quest.bystrov.exceptions;
 
 public class WrongAnswerException extends RuntimeException {
     public WrongAnswerException(String message) {

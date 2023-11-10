@@ -1,4 +1,4 @@
-package com.example.quest.entity;
+package com.example.quest.bystrov.entity;
 
 import java.util.Random;
 

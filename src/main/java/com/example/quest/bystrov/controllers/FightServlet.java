@@ -1,7 +1,7 @@
-package com.example.quest.controllers;
+package com.example.quest.bystrov.controllers;
 
-import com.example.quest.entity.Enemy;
-import com.example.quest.entity.Fight;
+import com.example.quest.bystrov.entity.Enemy;
+import com.example.quest.bystrov.entity.Fight;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,7 +14,6 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 @WebServlet(name = "fight", value = "/fight")
 public class FightServlet extends HttpServlet {

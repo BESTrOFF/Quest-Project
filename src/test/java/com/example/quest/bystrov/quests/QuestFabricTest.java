@@ -1,6 +1,6 @@
-package com.example.quest.quests;
+package com.example.quest.bystrov.quests;
 
-import com.example.quest.exceptions.CreateQuestException;
+import com.example.quest.bystrov.exceptions.CreateQuestException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

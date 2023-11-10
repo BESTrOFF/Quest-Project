@@ -1,4 +1,4 @@
-package com.example.quest.entity;
+package com.example.quest.bystrov.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Fight {
     private List<Enemy> enemies;
-    private Random random;
+    private final Random random;
 
     public Fight() {
         random = new Random();

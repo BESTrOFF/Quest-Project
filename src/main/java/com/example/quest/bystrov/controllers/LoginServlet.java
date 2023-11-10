@@ -1,7 +1,7 @@
-package com.example.quest.controllers;
+package com.example.quest.bystrov.controllers;
 
-import com.example.quest.db.DB;
-import com.example.quest.db.DBController;
+import com.example.quest.bystrov.db.DB;
+import com.example.quest.bystrov.db.DBController;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

@@ -1,9 +1,7 @@
-package com.example.quest.controllers;
+package com.example.quest.bystrov.controllers;
 
-import com.example.quest.entity.Enemy;
-import com.example.quest.questions.quests.AlienQuest;
-import com.example.quest.questions.quests.Quest;
-import com.example.quest.questions.quests.QuestFabric;
+import com.example.quest.bystrov.quests.QuestFabric;
+import com.example.quest.bystrov.quests.Quest;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

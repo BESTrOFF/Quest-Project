@@ -1,4 +1,4 @@
-package com.example.quest.db;
+package com.example.quest.bystrov.db;
 
 import java.util.HashMap;
 
